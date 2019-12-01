@@ -14,8 +14,11 @@ textarea{
 
 }
 #textbord {
-    padding:15px;
+    padding:20px;
 }
 #buttonz{
-    margin-top: 40px;
+margin-top:200px;
+}
+button{
+margin:0 auto;  
 }
