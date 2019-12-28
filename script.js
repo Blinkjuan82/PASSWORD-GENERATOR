@@ -1,14 +1,35 @@
-const charCount = prompt("How long is your password? (Must be between 8 to 128 characters)");
-const capLett = confirm("Does it contain upper case letters?");
-const lowLet = confirm("Does it Contain lower case letters?");
-const numQues = confirm("Does it contain numeric characters?");
-const specSym = confirm("Does it contain special symbols?");
+// const charCount = prompt("How long is your password? (Must be between 8 to 128 characters)");
+// const capLett = confirm("Does it contain upper case letters?");
+// const lowLet = confirm("Does it Contain lower case letters?");
+// const numQues = confirm("Does it contain numeric characters?");
+// const specSym = confirm("Does it contain special symbols?");
 
-const results = document.querySelector("#result");
-const num =['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-const capChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-const lowChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-const sym = ['!', '@', '#', '$', '%', '^', '&', '*', '=', '-'];
+// const results = document.querySelector("#result");
+const howLong = prompt("How long is your password? \n (Must be between 8 to 128 characters)");
+        if(howLong >= 8 && howLong <= 128){
+            const capLett = confirm ("Does it contain upper case letters?");
+            const capChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+            const capLength = capChar.length;
+            const randChar = capChar[Math.floor(Math.random() * capLength)]
+                console.log(randChar);
+            
+            
+
+
+        }else{
+            alert("Please enter the appropriate amount of characters!");
+        }
+
+// const num =['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+// const numLength = num.length;
+
+//     for (i = 0; i < numLength; i++){
+//         console.log(i);
+//         if
+//     }
+// const capChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+// const lowChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// const sym = ['!', '@', '#', '$', '%', '^', '&', '*', '=', '-'];
 
 
 
