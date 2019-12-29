@@ -26,8 +26,8 @@ function passwordLengthFunctionPrompt(){
     }
     
 }
-passwordLengthFunctionPrompt();
-console.log(passLength);
+// passwordLengthFunctionPrompt();
+// console.log(passLength);
 
 
 //function for confirm questions
@@ -58,13 +58,29 @@ function confirmQuestions(){
         for(let i = 0; i < passLength; i++){
             confirmChar = Math.floor(Math.random()* totalChar.length);
             officialPassword += totalChar[confirmChar];
-        }
+        };
         //where the password is going to be inserted
         document.getElementById("password").value = officialPassword;
 
+};
+// confirmQuestions();
+
+// console.log(totalChar);
+//Now to start code by clicking Generate button
+const btnGenerate = document.getElementById('generate');
+btnGenerate.onclick = function (){
+    passwordLengthFunctionPrompt();
+    confirmQuestions();
 }
-confirmQuestions();
-console.log(totalChar);
+//Now to copy the password
+const newPasswordText = document.getElementById("password");
+const btnCopy = document.getElementById('copy');
+
+btnCopy.onclick = function(){
+    newPasswordText.select();
+    document.execCommand("copy");
+    alert("copied!");
+}
 
 // const results = document.querySelector("#result");
 // const howLong = prompt("How long is your password? \n (Must be between 8 to 128 characters)");
